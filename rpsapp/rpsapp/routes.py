@@ -1,6 +1,6 @@
 from flask import request, render_template
 from flask import current_app as app
-from datetime import datetime
+
 from .inference import get_category, plot_category
 
 
@@ -20,8 +20,6 @@ def rock_paper_scissor():
         # Get category of prediction
         category = get_category(img=file)
         # Plot the category
-        now = datetime.now()
-        current_time = now.strftime("%H-%M-%S")
-        plot_category(file, current_time)
+        plot_category(file)
         # Render the result template
-        return render_template('result.html', category=category, current_time=current_time)
+        return render_template('result.html', category=category)

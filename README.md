@@ -15,12 +15,6 @@ app that predicts what the input image is
 
 ## Deploying the App in AWS BeanStalk
 
-__Pre-Requisite__
-
-- To run elastic beanstalk commands on your CLI, you need to install EB CLI. Please take a look at the following article to install EB CLI:
-
-    [Install the EB CLI](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb-cli3-install-advanced.html)
-
 In this assignment you will modify the Rock Paper Scissor App so that you can deploy it using Aws Elastic Beanstalk (EBS).
 
 To do this, follow the following steps:
@@ -81,8 +75,6 @@ available.
 
 - The `region` specifies the region where you want to create the instance and in our case we will use `us-west-2`.
 
-- Note that this command runs in your local environment. You aren't connected to AWS.
-
 __Step 7:__
 
 - Next to create the AWS EBS instance:
@@ -92,8 +84,6 @@ eb create rpsapp --instance_type t2.large
 ```
 
 - Where we can use the `instance_type` flag to specify the instance we want.
-
-- This is the step where you connect to AWS and the app gets created and pushed into an S3 bucket.
 
 __Step 8:__
 

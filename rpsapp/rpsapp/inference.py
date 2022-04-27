@@ -52,7 +52,7 @@ def get_category(img):
     return class_names[predicted_label]
 
 
-def plot_category(img, current_time):
+def plot_category(img):
     """Plot the input image
 
     Args:
@@ -60,10 +60,5 @@ def plot_category(img, current_time):
     """
     read_img = mpimg.imread(img)
     ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
-    file_path = os.path.join(ROOT_DIR + f'/static/images/output_{current_time}.png')
-    print(file_path)
-
-    if os.path.exists(file_path):
-        os.remove(file_path)
-
-    plt.imsave(file_path, read_img)
+    path = os.path.join(ROOT_DIR + '/static/images/output.png')
+    plt.imsave(path, read_img)
