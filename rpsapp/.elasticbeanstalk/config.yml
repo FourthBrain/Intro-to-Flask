@@ -1,0 +1,19 @@
+branch-defaults:
+  default:
+    environment: rpsapp
+environment-defaults:
+  rpsapp:
+    branch: null
+    repository: null
+global:
+  application_name: rpsapp
+  default_ec2_keyname: null
+  default_platform: Python 3.7
+  default_region: us-west-2
+  include_git_submodules: true
+  instance_profile: null
+  platform_name: null
+  platform_version: null
+  profile: eb-cli
+  sc: null
+  workspace_type: Application

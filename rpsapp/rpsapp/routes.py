@@ -1,8 +1,7 @@
+from flask import request, render_template
+from flask import current_app as app
 from datetime import datetime
-from flask import Flask, request, render_template
-from inference import get_category, plot_category
-
-app = Flask(__name__)
+from .inference import get_category, plot_category
 
 
 @app.route('/', methods=['GET', 'POST'])
@@ -26,7 +25,3 @@ def rock_paper_scissor():
         plot_category(file, current_time)
         # Render the result template
         return render_template('result.html', category=category, current_time=current_time)
-
-
-if __name__ == '__main__':
-    app.run(debug=True)

@@ -22,8 +22,8 @@ def get_category(img):
     Returns:
         [str]: Prediction
     """
-
-    path = 'static/model/'
+    ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
+    path = os.path.join(ROOT_DIR + '/static/model/')
     tflite_model_file = 'converted_model.tflite'
 
     # Load TFLite model and allocate tensors.
